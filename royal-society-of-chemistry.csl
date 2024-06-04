@@ -160,9 +160,11 @@
             <text variable="container-title" font-style="italic" form="short"/>
             <choose>
               <if variable="page">
-                <text macro="issued"/>
-                <text variable="volume" font-weight="bold"/>
-                <text variable="page"/>
+                <group delimiter=", ">
+                  <text macro="issued"/>
+                  <text variable="volume" font-weight="bold"/>
+                  <text variable="page"/>
+                </group>
               </if>
               <else>
                 <text variable="DOI" prefix=", DOI:"/>
